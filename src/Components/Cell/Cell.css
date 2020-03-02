@@ -1,0 +1,8 @@
+.grid--cell{
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-top: 6px;
+    border-bottom: rgba(4, 4, 4, 0.2) solid 0.18em;
+    border-left: rgba(0, 0, 0, 0.19) solid 0.18em;
+}

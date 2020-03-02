@@ -1,0 +1,8 @@
+#sizeChecker{
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+p{
+    width: 40px;
+}
