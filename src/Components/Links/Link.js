@@ -1,14 +1,13 @@
 import React from "react";
 
-const LinkList = (props) => {
-
-  const list = props.list;
+const Link = (props) => {
 
   return(
-    <div className="linkList">
-      {list.map()}
-    </div>
+    <a href={props.url}
+       className="Link">
+      {props.children}
+    </a>
   );
 };
 
-export default LinkList;
+export default Link;

@@ -6,3 +6,9 @@
     border-bottom: rgba(4, 4, 4, 0.2) solid 0.18em;
     border-left: rgba(0, 0, 0, 0.19) solid 0.18em;
 }
+#git{
+    color: grey;
+}
+#inst{
+    color: #ff7fa0;
+}

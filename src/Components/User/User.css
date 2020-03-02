@@ -1,3 +1,12 @@
 #user--ops{
     height: auto;
 }
+#user--slot{
+    display: flex;
+    justify-content: center;
+}
+#log--out{
+    height: 40px;
+    margin-top: 15px;
+    margin-right: 30px;
+}

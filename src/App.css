@@ -83,6 +83,9 @@ main{
 
 }
 #footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     grid-area: footer;
     background: rgba(52, 52, 52, 0.42);
 }

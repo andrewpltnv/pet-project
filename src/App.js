@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     try {
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      name = localStorage.getItem("name");
+      name = localStorage.getItem('name');
     } catch (e) {name = "";}
 
     if (name) setUser({nickname: name.toString()})
