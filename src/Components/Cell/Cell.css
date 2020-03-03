@@ -7,8 +7,11 @@
     border-left: rgba(0, 0, 0, 0.19) solid 0.18em;
 }
 #git{
-    color: grey;
+    color: #b6b6b6;
 }
 #inst{
     color: #ff7fa0;
+}
+#facebook{
+    color: rgb(0, 124, 255);
 }

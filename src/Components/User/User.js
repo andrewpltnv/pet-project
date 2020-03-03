@@ -13,7 +13,7 @@ const User = (props) => {
   return(
     <div id="user--slot">
       <Title>
-        <h3>{props.nickname}</h3>
+        <p id="user--name" className="p1">{props.nickname}</p>
       </Title>
       <button id="log--out" onClick={logOut}>Log out</button>
     </div>

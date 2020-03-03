@@ -17,9 +17,9 @@ const Cell = (props) => {
     case "footer":
       return (
         <div id={id} className="grid--cell">
-          <Title><h3>Footer</h3></Title>
-          <Link url="https://github.com/andrewpltnv"><p className="p1" id="git">GitHub</p></Link>
           <Link url="https://www.instagram.com/andrewpltnv/"><p className="p1" id="inst">Instagram</p></Link>
+          <Link url="https://www.facebook.com/andrew.platonov.andrewpltnv"><p className="p1" id="facebook">Facebook</p></Link>
+          <Link url="https://github.com/andrewpltnv"><p className="p1" id="git">GitHub</p></Link>
         </div>
       );
     default:

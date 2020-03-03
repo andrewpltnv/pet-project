@@ -5,13 +5,18 @@
     height: auto;
 }
 #user--slot{
+    padding-left: 10px;
     display: flex;
     justify-content: center;
+}
+#user--name{
+    height: 10px;
 }
 #log--out{
     height: 40px;
     margin-top: 15px;
-    margin-right: 30px;
+    margin-right: 16px;
+    padding-top: 18px;
     background-color: #4e4e4e;
     border: #4e4e4e solid 2px;
     color: rgba(208, 208, 208, 0.73);

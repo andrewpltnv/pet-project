@@ -29,7 +29,7 @@ const App = () => {
         <Cell id="nav"><h3>Navigation</h3></Cell>
         <Cell id="article"><h3>Article</h3></Cell>
         <Cell id="ads"><h3>Ads</h3></Cell>
-        <Cell id="footer"><h3>Footer</h3></Cell>
+        <Cell id="footer"/>
       </main>
     </div>
   );
