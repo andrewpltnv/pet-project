@@ -21,3 +21,16 @@
     border: #4e4e4e solid 2px;
     color: rgba(208, 208, 208, 0.73);
 }
+@media all and (max-width: 1200px) {
+    #log--out{
+        margin-right: 1px;
+    }
+    #user--slot{
+        padding-left: 1px;
+    }
+}
+@media all and (max-width: 1100px) {
+    #user--slot{
+        flex-direction: column;
+    }
+}

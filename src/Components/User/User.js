@@ -15,7 +15,9 @@ const User = (props) => {
       <Title>
         <p id="user--name" className="p1">{props.nickname}</p>
       </Title>
-      <button id="log--out" onClick={logOut}>Log out</button>
+      <button id="log--out" onClick={logOut}><i className="material-icons">
+        exit_to_app
+      </i></button>
     </div>
   );
 };

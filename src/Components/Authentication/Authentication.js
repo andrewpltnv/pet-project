@@ -28,6 +28,7 @@ const Authentication = (props) => {
       <form target="_self" action="/register" method="post" onSubmit={handleSubmit} autoComplete="on" className="main--form">
           <input name="name"
                  type="text"
+                 minLength="2"
                  maxLength="10"
                  value={name}
                  placeholder="Name"

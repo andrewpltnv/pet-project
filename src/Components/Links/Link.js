@@ -4,7 +4,7 @@ const Link = (props) => {
 
   const style = {
     "width": "auto",
-    "min-width":"15%",
+    "min-width":"115px",
     "margin": "5px 15px",
     "background-color": "#4e4e4e",
     "border": "#4e4e4e solid 2px",

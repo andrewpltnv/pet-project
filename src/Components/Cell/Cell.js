@@ -25,7 +25,10 @@ const Cell = (props) => {
     default:
       return (
         <div id={id} className="grid--cell">
-          <Title>{props.children}</Title>
+          <Title>{props.title}</Title>
+          <>
+            {props.children}
+          </>
         </div>
       );
   }
