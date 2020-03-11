@@ -5,9 +5,8 @@ import Title from "../Title/Title";
 const User = (props) => {
 
   function logOut(event) {
-    localStorage.removeItem('name');
-    localStorage.removeItem('pass');
-    window.location.reload(true);
+    localStorage.clear();
+    props.handleSignChanger();
   }
 
   return(

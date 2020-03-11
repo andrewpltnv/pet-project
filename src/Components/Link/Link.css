@@ -1,0 +1,33 @@
+.Link{
+    width: auto;
+    min-width:115px;
+    margin: 10px 15px;
+    padding-left: 15px;
+    background-color: rgba(78,78,78,0.73);
+    border: 2px solid rgba(78, 78, 78, 0.2);
+    border-radius: 3%;
+    display: block;
+    text-shadow: #f00dd74f 1px 1px 2px, #5b29779c 0 0 1em;
+}
+.Link:hover {
+    outline: 0;
+    animation: flicker .3s ease both;
+    animation-name: flicker;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    color: #8e4cf7;
+}
+@media all and (max-width: 1100px){
+    .Link{
+        width: 90%;
+        margin-right: auto;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -11,3 +11,32 @@ a{
 a:visited{
   color: #d9d9d9;
 }
+p{
+  width: auto;
+}
+ul{
+  margin-top: 0;
+  padding-left: 0;
+  padding-right: 10px;
+  padding-top: 1px;
+  height: 100%;
+}
+@media all and (max-width: 1050px){
+  ul{
+    padding-top: 1px;
+  }
+  li{
+    margin: 10px 0 0 15px;
+  }
+}
+li{
+  list-style: none;
+  margin: 10px 0 0 15px;
+  padding-top: 0;
+}
+li:first-child{
+  margin: 15px 0 0 15px;
+}
+a:not(:hover){
+  background-color: rgba(102, 102, 102, 0.67);
+}

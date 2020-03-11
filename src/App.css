@@ -1,7 +1,8 @@
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
     -ms-scroll-snap-points-y: unset;
-    background: linear-gradient(90deg, rgba(2, 0, 60, 0.92) 0%, rgba(121,9,88,1) 14%, rgba(179,36,185,1) 25%, rgba(238,40,255,1) 54%, rgba(171,123,184,1) 73%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgba(94, 18, 102, 0.63) 0%, rgba(175, 12, 125, 0.61) 10%, rgba(179, 36, 185, 0.83) 25%, rgba(238, 40, 255, 0.76) 54%, rgba(171,123,184,1) 79%, rgba(0,212,255,1) 100%);
 }
 html::after {
     content: '';
@@ -21,37 +22,38 @@ html::after {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 main{
     width: 100%;
-    height: 100%;/*TODO заменить*/
+    height: 100%;
     display: grid;
     grid-template-areas:
     "header header user--ops"
-    "nav article user--ops"
-    "nav article ads"
-    "nav footer footer";
-    grid-template-rows: 1fr 0.3fr 5.5fr max-content;
-    grid-template-columns: 1fr 4fr 1fr;
+    "info article user--ops"
+    "info article ads"
+    "info footer footer";
+    grid-template-rows: 1fr 0.3fr 5.5fr 0.5fr;
+    grid-template-columns: 3fr 4fr 1.2fr;
     grid-gap: 0.35vw;
     margin: 3px;
 }
 @media all and (max-width: 1100px) {
     main{
         grid-template-areas:
-                "header user--ops"
-                "nav user--ops"
-                "article article"
-                "ads ads"
-                "footer footer";
-        grid-template-rows: 1fr 0.3fr 4fr 0.5fr 1fr;
-        grid-template-columns:2fr 145px;
+                "header header user--ops"
+                "article article article"
+                "info ads ads"
+                "footer footer footer";
+        grid-template-rows: 0.3fr 0.3fr auto 0.5fr 1fr;
+        grid-template-columns:50% 1.4fr 145px;
     }
 }
 @media all and (max-width: 1100px){
     #footer{
         flex-direction: column;
+    }
+    #info{
+        flex-direction: row;
     }
 }
 @media all and (max-width: 700px){
@@ -75,8 +77,9 @@ main{
 #buttons{
     grid-area: buttons;
 }
-#nav{
-    grid-area: nav;
+#info{
+    grid-area: info;
+    border-bottom: rgba(255, 255, 255, 0) solid 0.18em;
 }
 #article{
     grid-area: article;
@@ -86,18 +89,52 @@ main{
 
 }
 #footer{
+    height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     grid-area: footer;
     background: rgba(52, 52, 52, 0.42);
-    overflow-x: auto;
-    text-align: inherit;
-    padding-right: 10px;
-}
-#footer a{
-    padding-left: 20px;
+    padding-right: 20px;
 }
 .material-icons{
     color: white;
+}
+@keyframes flicker{
+    0% {
+        opacity: 0;
+    }
+    10% {
+        margin-left: -2px;
+        opacity: .6;
+        color: rgba(192, 0, 53, 0.9);
+        transform: scale(.95);
+    }
+    40% {
+        opacity: 0.8;
+    }
+    70% {
+        margin-right: -2px;
+        color: rgba(0, 0, 255, 0.82);
+        opacity: .8;
+        transform: scale(1.01);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.01);
+    }
+}
+#photo{
+    transform: scale(0.85);
+    width: 230px;
+    height: 315px;
+    border-radius: 15px;
+    float: left;
+    object-fit: cover;
+}
+#contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: -15px;
 }

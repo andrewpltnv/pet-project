@@ -12,9 +12,9 @@
     height: auto;
     color: rgba(208, 208, 208, 0.73);
 }
-input{
+input:not(#stayIn){
     color: #a8a8a8;
-    margin: 18px 0 4px 0;
+    margin: 8px 0 9px 0;
     height: 20%;
     width: 90%;
     text-align: center;
@@ -26,8 +26,11 @@ input{
 input:focus{
     color: #ffffff;
 }
+.checkbox--container{
+
+}
 label{
     text-align: left;
-    width: min-content;
+    width: max-content;
 }
 

@@ -5,21 +5,23 @@ const axios = require('axios').default;
 const Authentication = (props) => {
 
   const [name, setName] = useState('');
+  const [stay, setStay] = useState(false);
 
   const handleNameChange = (event) => {
-    const temp = (event.target.value);
+    const temp = event.target.value;
     if (typeof temp !== 'undefined') setName(temp);
   };
+  const handleStayChange = (event) => {setStay(event.target.checked);};
 
   const handleSubmit = (event) => {
     localStorage.setItem('name', name.toString());
+    localStorage.setItem('stayIn', stay.toString());
 
-    const response = axios.post(
+    axios.post(
       'http://localhost:3001/register',
-      { name: name}
-    );
-    console.log(response.data);
-    document.location.href = "";
+      {name: name}
+    ).catch(r => console.error(r)) ;
+    props.handleSignChanger();
     event.preventDefault();
   };
 
@@ -29,10 +31,14 @@ const Authentication = (props) => {
           <input name="name"
                  type="text"
                  minLength="2"
-                 maxLength="10"
+                 maxLength="12"
                  value={name}
                  placeholder="Name"
                  onChange={handleNameChange}
+          />
+          <input id="stayIn"
+                 type="checkbox"
+                 onChange={handleStayChange}
           />
           <input type="submit"
                  value="Log in"
