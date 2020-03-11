@@ -29,10 +29,10 @@ main{
     display: grid;
     grid-template-areas:
     "header header user--ops"
-    "info article user--ops"
-    "info article ads"
+    "info article article"
+    "ads article article"
     "info footer footer";
-    grid-template-rows: 1fr 0.3fr 5.5fr 0.5fr;
+    grid-template-rows: 1fr 3fr 3fr 0.5fr;
     grid-template-columns: 3fr 4fr 1.2fr;
     grid-gap: 0.35vw;
     margin: 3px;
@@ -45,20 +45,28 @@ main{
                 "info ads ads"
                 "footer footer footer";
         grid-template-rows: 0.3fr 0.3fr auto 0.5fr 1fr;
-        grid-template-columns:50% 1.4fr 145px;
+        grid-template-columns:550px 1.4fr 145px;
     }
 }
 @media all and (max-width: 1100px){
-    #footer{
-        flex-direction: column;
-    }
     #info{
         flex-direction: row;
     }
 }
-@media all and (max-width: 700px){
-    section{
-        display: none;
+@media all and (max-width: 720px){
+    main{
+        grid-template-areas:
+                "header user--ops"
+                "article article"
+                "info info"
+                "ads ads"
+                "footer footer";
+        grid-template-rows: 0.3fr auto auto auto 0.3fr;
+        grid-template-columns:auto 150px;
+        grid-gap: 1vw;
+    }
+    html{
+        min-width: 480px;
     }
 }
 #header{

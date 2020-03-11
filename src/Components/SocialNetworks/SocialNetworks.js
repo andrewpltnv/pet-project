@@ -10,7 +10,7 @@ const SocialNetworks = () => {
   };
 
   return(
-    <div>
+    <div id="link--list">
       {Object.keys(urls).map(id => (
         <Link url={urls[id]}><p className="p1" id={id}>{id[0].toUpperCase()+id.slice(1)}</p></Link>
       ))}

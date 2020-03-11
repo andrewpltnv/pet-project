@@ -4,7 +4,7 @@ import Photo from "../../pic.png";
 const Contacts = () => {
   return(
     <span id="info">
-      <img src={Photo} alt="Me" id="photo"/>
+      <div><img src={Photo} alt="Me" id="photo"/></div>
       <ul>
         <li><p className="p3">Motivated, creative and hard-working engineer from Kyiv.
 I have experience developing responsive and adaptive applications using React.js and native JS.

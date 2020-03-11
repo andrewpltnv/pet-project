@@ -40,14 +40,14 @@ p{
 }
 .p1{
     color: #e6e6e6;
-
+    width: auto;
     font-size: 20px;
     line-height: 26px;
     font-family: 'Source Sans Pro', sans-serif;
 }
 .p2{
     color: #e6e6e6;
-
+    width: auto;
     font-size: 16px;
     line-height: 22px;
     font-family: 'Source Sans Pro', sans-serif;
