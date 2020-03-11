@@ -16,7 +16,7 @@ html::after {
     background-image: url(base-body-overlay.gif);
     /*background-image: url(https://i.pinimg.com/originals/4e/a6/3e/4ea63e12fdc0d696365a44161d0cb3c8.jpg);*/
     filter: grayscale(1);
-    opacity: .085;/*0,085*/
+    opacity: .09;/*0,085*/
     pointer-events: none;
 }
 .App{

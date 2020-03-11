@@ -24,7 +24,7 @@ const CreatePost = (props) => {
   };
 
   return(
-    <form target="_self" action="" method="" onSubmit={handleSubmit} autoComplete="off" id="create--post">
+    <form target="_self" action="/" method="" onSubmit={handleSubmit} autoComplete="off" id="create--post">
       <textarea name="text"
              id="comment"
              className="message"

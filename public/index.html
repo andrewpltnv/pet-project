@@ -38,7 +38,15 @@
         });
         console.log(response);
       }
+
       showDb();
+      async function deleteFromDb(folder, file) {
+        db.collection(folder).doc(file).delete().then(function() {
+          console.log("Document successfully deleted!");
+        }).catch(function(error) {
+          console.error("Error removing document: ", error);
+        });
+      }
 
     </script>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />

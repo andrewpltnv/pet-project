@@ -6,7 +6,8 @@ const SocialNetworks = () => {
   let urls = {
     instagram: "https://www.instagram.com/andrewpltnv",
     facebook: "https://www.facebook.com/andrew.platonov.andrewpltnv",
-    gitHub: "https://github.com/andrewpltn"
+    gitHub: "https://github.com/andrewpltn",
+    telegram: "andrewpltnv"
   };
 
   return(

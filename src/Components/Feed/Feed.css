@@ -37,6 +37,7 @@
     border-color: rgba(78, 78, 78, 0.42);
     border-radius: 5px;
     height: 170px;
+    min-width: 250px;
 }
 #comment{
     height: 130px;
@@ -45,4 +46,8 @@
 }
 #submit--comment{
     height: 40px !important;
+}
+.delete{
+    float: right;
+    margin-top: -20px;
 }
