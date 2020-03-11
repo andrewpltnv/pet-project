@@ -7,8 +7,8 @@ const Contacts = () => {
       <div><img src={Photo} alt="Me" id="photo"/></div>
       <ul>
         <li><p className="p3">Motivated, creative and hard-working engineer from Kyiv.
-I have experience developing responsive and adaptive applications using React.js and native JS.
-Now I am trying to understand the amount of skills I need in commercial development.</p></li>
+I have experience developing responsive and adaptive applications using React.js.
+Now I want to prove myself in commercial development.</p></li>
         <li><p className="p3">andrewpltnv@gmail.com</p></li>
         <li><p className="p3">+38(068)745-36-19</p></li>
       </ul>

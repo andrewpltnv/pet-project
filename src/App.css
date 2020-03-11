@@ -1,6 +1,7 @@
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
+    min-width: auto;
     -ms-scroll-snap-points-y: unset;
     background: linear-gradient(90deg, rgba(94, 18, 102, 0.63) 0%, rgba(175, 12, 125, 0.61) 10%, rgba(179, 36, 185, 0.83) 25%, rgba(238, 40, 255, 0.76) 54%, rgba(171,123,184,1) 79%, rgba(0,212,255,1) 100%);
 }
@@ -25,39 +26,42 @@ html::after {
 }
 main{
     width: 100%;
-    height: 100%;
+    height: auto;
     display: grid;
     grid-template-areas:
-    "header header user--ops"
-    "info article article"
-    "ads article article"
-    "info footer footer";
-    grid-template-rows: 1fr 3fr 3fr 0.5fr;
-    grid-template-columns: 3fr 4fr 1.2fr;
-    grid-gap: 0.35vw;
-    margin: 3px;
-}
-@media all and (max-width: 1100px) {
-    main{
-        grid-template-areas:
-                "header header user--ops"
-                "article article article"
-                "info ads ads"
-                "footer footer footer";
-        grid-template-rows: 0.3fr 0.3fr auto 0.5fr 1fr;
-        grid-template-columns:550px 1.4fr 145px;
-    }
+            "header header user--ops"
+            "info feed feed"
+            "ads feed feed"
+            "footer footer footer";
+    grid-template-rows: 0.3fr 0.3fr auto 0.5fr;
+    grid-template-columns:520px 1.4fr 195px;
+    grid-gap: 0.7vw;
+    margin: 6px 6px 6px 6px;
 }
 @media all and (max-width: 1100px){
-    #info{
-        flex-direction: row;
-    }
-}
-@media all and (max-width: 720px){
     main{
         grid-template-areas:
                 "header user--ops"
-                "article article"
+                "feed feed"
+                "info ads"
+                "footer footer";
+        grid-template-rows: 0.3fr auto auto 0.3fr;
+        grid-template-columns:700px auto;
+        grid-gap: 1vw;
+    }
+    #info{
+        flex-direction: row;
+    }
+    #header{
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+}
+@media all and (max-width: 850px){
+    main{
+        grid-template-areas:
+                "header user--ops"
+                "feed feed"
                 "info info"
                 "ads ads"
                 "footer footer";
@@ -65,12 +69,30 @@ main{
         grid-template-columns:auto 150px;
         grid-gap: 1vw;
     }
-    html{
-        min-width: 480px;
-    }
 }
 #header{
+    padding-top:10px;
+    padding-left: 20px;
     grid-area: header;
+    display: flex;
+}
+#photo{
+    transform: scale(0.85);
+    width: 230px;
+    height: 315px;
+    border-radius: 15px;
+    float: left;
+    object-fit: cover;
+}
+@media all and (max-width: 480px){
+    #header{
+        padding-left: 5px;
+    }
+    #photo{
+        transform: scale(0.85);
+        width: 200px;
+        height: 290px;
+    }
 }
 .title{
     margin: 5px auto 5px 12px;
@@ -87,10 +109,11 @@ main{
 }
 #info{
     grid-area: info;
+    width: auto;
     border-bottom: rgba(255, 255, 255, 0) solid 0.18em;
 }
-#article{
-    grid-area: article;
+#feed{
+    grid-area: feed;
 }
 #ads{
     grid-area: ads;
@@ -100,10 +123,10 @@ main{
     height: 60px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     grid-area: footer;
     background: rgba(52, 52, 52, 0.42);
-    padding-right: 20px;
+    padding-left: 15px;
 }
 .material-icons{
     color: white;
@@ -131,14 +154,6 @@ main{
         opacity: 1;
         transform: scale(1.01);
     }
-}
-#photo{
-    transform: scale(0.85);
-    width: 230px;
-    height: 315px;
-    border-radius: 15px;
-    float: left;
-    object-fit: cover;
 }
 #contacts{
     display: flex;
