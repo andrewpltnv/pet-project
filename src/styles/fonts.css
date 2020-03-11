@@ -57,7 +57,8 @@ p{
 
     text-align: left;
     width: auto;
-    font-size: 1.05em;
+    padding-left: 15px;
+    font-size: 1.2em;
     line-height: 22px;
     font-family: 'Source Sans Pro', sans-serif;
 }

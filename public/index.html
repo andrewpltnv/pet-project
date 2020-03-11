@@ -12,6 +12,35 @@
       content="Web site created using create-react-app"
     />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+    <script>
+      firebase.initializeApp({
+        apiKey: 'AIzaSyBNMXI670B665-ce1j4pLcaD75WObboaFU',
+        authDomain: 'pet-project-2020.firebaseapp.com',
+        projectId: 'pet-project-2020'
+      });
+      var db = firebase.firestore();
+
+      async function addToDb (folder,file,object) {
+        db.collection(folder).doc(file).set(object).then(function() {
+          console.log("Document successfully written!");
+        }).catch(function(error) {
+          console.error("Error adding document: ", error);
+        });
+      }
+
+      let response = [];
+      async function showDb() {
+        db.collection("users").get().then((querySnapshot) => {
+          querySnapshot.forEach((doc,index) => response.push(doc.data()));
+          localStorage.setItem('data',JSON.stringify(response));
+        });
+        console.log(response);
+      }
+      showDb();
+
+    </script>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a

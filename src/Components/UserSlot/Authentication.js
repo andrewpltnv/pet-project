@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./Authentication.css";
-const axios = require('axios').default;
+//const axios = require('axios').default;
 
 const Authentication = (props) => {
 
@@ -17,17 +17,18 @@ const Authentication = (props) => {
     localStorage.setItem('name', name.toString());
     localStorage.setItem('stayIn', stay.toString());
 
-    axios.post(
+    /*axios.post(
       'http://localhost:3001/register',
       {name: name}
-    ).catch(r => console.error(r)) ;
+    ).catch(r => console.error(r)) ;*/
+
     props.handleSignChanger();
     event.preventDefault();
   };
 
   return(
     <div id="user--slot">
-      <form target="_self" action="/register" method="post" onSubmit={handleSubmit} autoComplete="on" className="main--form">
+      <form target="_self" action="" method="post" onSubmit={handleSubmit} autoComplete="on" className="main--form">
           <input name="name"
                  type="text"
                  minLength="2"
@@ -41,7 +42,7 @@ const Authentication = (props) => {
                  onChange={handleStayChange}
           />
           <input type="submit"
-                 value="Log in"
+                 value="Sign in"
                  id="submit"
                  onSubmit={handleSubmit}
           />

@@ -16,7 +16,7 @@ html::after {
     background-image: url(base-body-overlay.gif);
     /*background-image: url(https://i.pinimg.com/originals/4e/a6/3e/4ea63e12fdc0d696365a44161d0cb3c8.jpg);*/
     filter: grayscale(1);
-    opacity: .03;
+    opacity: .085;/*0,085*/
     pointer-events: none;
 }
 .App{
@@ -32,7 +32,7 @@ main{
             "header header user--ops"
             "info feed feed"
             "ads feed feed"
-            "footer footer footer";
+            "footer feed feed";
     grid-template-rows: 0.3fr 0.3fr auto 0.5fr;
     grid-template-columns:520px 1.4fr 195px;
     grid-gap: 0.7vw;
@@ -42,8 +42,8 @@ main{
     main{
         grid-template-areas:
                 "header user--ops"
-                "feed feed"
                 "info ads"
+                "feed feed"
                 "footer footer";
         grid-template-rows: 0.3fr auto auto 0.3fr;
         grid-template-columns:700px auto;
@@ -61,8 +61,8 @@ main{
     main{
         grid-template-areas:
                 "header user--ops"
-                "feed feed"
                 "info info"
+                "feed feed"
                 "ads ads"
                 "footer footer";
         grid-template-rows: 0.3fr auto auto auto 0.3fr;
@@ -120,7 +120,7 @@ main{
 
 }
 #footer{
-    height: 60px;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
