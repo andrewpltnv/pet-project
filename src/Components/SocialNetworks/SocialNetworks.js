@@ -7,7 +7,6 @@ const SocialNetworks = () => {
     instagram: "https://www.instagram.com/andrewpltnv",
     facebook: "https://www.facebook.com/andrew.platonov.andrewpltnv",
     gitHub: "https://github.com/andrewpltn",
-    telegram: "andrewpltnv"
   };
 
   return(

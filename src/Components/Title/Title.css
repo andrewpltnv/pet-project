@@ -4,4 +4,5 @@
     color: #00000080;
     display: -webkit-box;
     width: max-content;
+    height: min-content;
 }

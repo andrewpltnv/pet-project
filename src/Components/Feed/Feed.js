@@ -13,7 +13,7 @@ const Feed = () => {
     <div id="board">{
         // eslint-disable-next-line array-callback-return
         data.map((value, index, array)=>{
-          return <Message name={value.first} lastName={value.last} year={value.born} comment={value.text} key={index}/>
+          return <Message name={value.first} comment={value.text} key={index}/>
         })}
       <CreatePost/>
     </div>

@@ -5,17 +5,14 @@ import "./Authentication.css";
 const Authentication = (props) => {
 
   const [name, setName] = useState('');
-  const [stay, setStay] = useState(false);
 
   const handleNameChange = (event) => {
     const temp = event.target.value;
     if (typeof temp !== 'undefined') setName(temp);
   };
-  const handleStayChange = (event) => {setStay(event.target.checked);};
 
   const handleSubmit = (event) => {
     localStorage.setItem('name', name.toString());
-    localStorage.setItem('stayIn', stay.toString());
 
     /*axios.post(
       'http://localhost:3001/register',
@@ -36,10 +33,6 @@ const Authentication = (props) => {
                  value={name}
                  placeholder="Name"
                  onChange={handleNameChange}
-          />
-          <input id="stayIn"
-                 type="checkbox"
-                 onChange={handleStayChange}
           />
           <input type="submit"
                  value="Sign in"

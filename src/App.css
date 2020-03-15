@@ -3,7 +3,10 @@ html{
     overflow-x: hidden;
     min-width: auto;
     -ms-scroll-snap-points-y: unset;
+    background: rgba(29, 29, 29, 0.42);
+    /*
     background: linear-gradient(90deg, rgba(94, 18, 102, 0.63) 0%, rgba(175, 12, 125, 0.61) 10%, rgba(179, 36, 185, 0.83) 25%, rgba(238, 40, 255, 0.76) 54%, rgba(171,123,184,1) 79%, rgba(0,212,255,1) 100%);
+    */
 }
 html::after {
     content: '';
@@ -14,9 +17,11 @@ html::after {
     right: 0;
     z-index: 1100;
     background-image: url(base-body-overlay.gif);
-    /*background-image: url(https://i.pinimg.com/originals/4e/a6/3e/4ea63e12fdc0d696365a44161d0cb3c8.jpg);*/
+    /*
+    background-image: url(https://i.pinimg.com/originals/4e/a6/3e/4ea63e12fdc0d696365a44161d0cb3c8.jpg);
+    */
     filter: grayscale(1);
-    opacity: .09;/*0,085*/
+    opacity: .03;/*0,085*/
     pointer-events: none;
 }
 .App{
@@ -127,6 +132,7 @@ main{
     grid-area: footer;
     background: rgba(52, 52, 52, 0.42);
     padding-left: 15px;
+    padding-top: 10px;
 }
 .material-icons{
     color: white;

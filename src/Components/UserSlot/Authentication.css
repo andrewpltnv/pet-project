@@ -14,8 +14,8 @@
 }
 input:not(#stayIn){
     color: #a8a8a8;
-    margin: 8px 0 9px 0;
-    height: 20%;
+    margin: 4px 0 4px 0;
+    height: 50%;
     width: 90%;
     text-align: center;
     border-radius: 4%;

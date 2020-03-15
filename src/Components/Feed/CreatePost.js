@@ -2,6 +2,11 @@ import React, {useState} from "react";
 
 const CreatePost = (props) => {
 
+  function randomInteger(min, max) {
+    let rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
+  }
+
   const [text, setText] = useState('');
   const handleTextChange = (event) => {
     const temp = event.target.value;
@@ -10,8 +15,6 @@ const CreatePost = (props) => {
   const handleSubmit = (event) => {
     let temp = {
       first: '',
-      last: 'Guest',
-      born: 1337,
       text: ''
     };
     if (localStorage.getItem('name') && text){
@@ -19,17 +22,19 @@ const CreatePost = (props) => {
       console.log(text);
       temp.text = text;
     } else return null;
-    window.addToDb('users',`${temp.first}`,temp);
+    window.addToDb('users',`${temp.first+randomInteger(1,300)}`,temp);
+    setText("Restart page, this feature will be added soon.");
     event.preventDefault();
   };
 
   return(
     <form target="_self" action="/" method="" onSubmit={handleSubmit} autoComplete="off" id="create--post">
-      <textarea name="text"
+      <textarea
+             name="text"
              id="comment"
              className="message"
              minLength="2"
-             maxLength="50"
+             maxLength="70"
              value={text}
              placeholder="Type your comment here"
              onChange={handleTextChange}
